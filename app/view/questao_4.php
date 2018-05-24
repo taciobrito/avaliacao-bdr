@@ -4,7 +4,7 @@
 
     <h1>Questão 4</h1>
 
-    <div class="alert alert-dark" role="alert">
+    <div class="alert alert-light" role="alert">
         Desenvolva uma API Rest para um sistema gerenciador de tarefas
         (inclusão/alteração/exclusão). As tarefas consistem em título e descrição, 
         ordenadas por prioridade.

@@ -4,7 +4,7 @@
 
     <h1>Questão 2</h1>
 
-    <div class="alert alert-dark" role="alert">
+    <div class="alert alert-light" role="alert">
         Refatore o código abaixo, fazendo as alterações que julgar necessário.
         
         <div class="card">
