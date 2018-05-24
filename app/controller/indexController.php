@@ -2,8 +2,6 @@
     namespace App\Controller;
 
     use System\Controller;
-    use App\Model\ExampleModel;
-    use App\Model\VendasModel;
 
     class IndexController extends Controller 
     {

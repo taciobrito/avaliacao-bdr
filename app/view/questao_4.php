@@ -34,7 +34,7 @@
 		    Gerenciador de Tarefas
 		</div>
 		<div class="card-body">
-        	<a href="<?= $this->url(); ?>">Acesse aqui</a>
+        	<a href="<?= $this->url('tarefas'); ?>">Acesse aqui</a>
     	</div>
     </div>
 
