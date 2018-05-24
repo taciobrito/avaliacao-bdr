@@ -1,4 +1,4 @@
-# Instruções para executar o projeto:]
+# Instruções para executar o projeto:
 1. O servidor de aplicação utilizado foi o Apache, executado pelo Xampp.
 2. É necessário configurar o "base_url" no arquivo de configuração, loxalizado
 em: app\config\Config.php
