@@ -1,16 +1,28 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
+    require __DIR__ . "/app/config/Config.php";
 
-require 'webroot' . DIRECTORY_SEPARATOR . 'index.php';
+    Config::define("BASEPATH", __DIR__);
+    Config::define("BASEPATHSYSTEM", BASEPATH . DIRECTORY_SEPARATOR . Config::$system);
+    Config::define("APPPATH", BASEPATH . DIRECTORY_SEPARATOR . Config::$application);
+    
+    Config::define("CONTROLLER", APPPATH . DIRECTORY_SEPARATOR . Config::$controller . DIRECTORY_SEPARATOR);
+    Config::define("VIEW", APPPATH . DIRECTORY_SEPARATOR . Config::$view . DIRECTORY_SEPARATOR);
+    Config::define("MODEL", APPPATH . DIRECTORY_SEPARATOR . Config::$model . DIRECTORY_SEPARATOR);
+    Config::define("HELPERS", BASEPATHSYSTEM . DIRECTORY_SEPARATOR . Config::$helper . DIRECTORY_SEPARATOR);
+
+    Config::define('BASE_URL', Config::$base_url);
+
+    require Config::barderInDirectories(BASEPATHSYSTEM . '/Autoloader/Autoload.php');
+
+    $auto = new Autoload();
+    $auto->register();
+
+    try {
+        $start = new \System\System;
+        $start->run();
+    } catch (\Exception $e) {
+         require_once VIEW . 'errors/404.php';
+         // echo "Error! " . $e->getMessage();
+    }
+
+    if (Config::$debugger) $auto->getDebugger();
