@@ -11,9 +11,6 @@
 
     <body>
 
-	<!-- Image and text -->
-	<nav class="navbar navbar-light bg-light">
-	  
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	  <a class="navbar-brand" href="<?= $this->url(); ?>">
 	    <img src="<?= $this->url('assets/img/logo.jpg') ?>" width="30" height="30" class="d-inline-block align-top" alt="">
