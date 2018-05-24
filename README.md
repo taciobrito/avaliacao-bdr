@@ -4,7 +4,10 @@
 em: app\config\Config.php
 3. O banco de dados deve ser configurado através do arquivo database.php
 localizado em: app\config\database.php
-4. A página inicial apresenta a listagem das questões, ao clicar, é redirecionado
+4. A modelagem de dados está disponível em .jpg na raiz do projeto, assim como
+estão disponíveis os arquivos de edição da modelagem e o script .sql para criar
+a tabela do banco.
+5. A página inicial apresenta a listagem das questões, ao clicar, é redirecionado
 para a página interna de cada uma, contendo suas resoluções. No caso da questão 4,
 é apresentado um link para a listagem de tarefas cadastradas.
 
